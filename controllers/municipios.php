@@ -3,10 +3,11 @@
 if (isset($_POST)) {
 
     require('../inc/Mysql.php');
+    require('../inc/functions.php');
     require_once('../config/config.php');
     require_once('../models/municipio.php');
 
-    $id = $_POST['id'];
+    $id = cleanuserinput($_POST['id']);
 
     $municipio = new municipio;
 
